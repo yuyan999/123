@@ -1,0 +1,65 @@
+h1,h3{
+    color: rgba(8, 96, 238);text-align: center;
+}
+h1.a{
+    color: rgb(27, 210, 137);text-align: center;
+}
+h1.b{
+    color: rgb(218, 168, 17);text-align: center;
+}
+h1.c{
+    color: rgb(255, 120, 53);text-align: center;
+}
+h2{
+    color: brown;
+    font-style:italic;
+    text-align: center;
+}
+p.p1{
+    background-color: blanchedalmond;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+p.p2{
+    background-color: rgb(230, 55, 177);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+}
+p.p3{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div{
+    background-color: blanchedalmond;
+    font-size: 20px;
+}
+*.mystyle{ /*通用選擇器*/
+    color: blue;
+    font-style: italic;
+}
+#idtext{ /* id選擇器*/
+    color: orangered;
+    font-size: 30px;
+}
+
+[class]{ /* 屬性選擇器*/
+    font-style: oblique;
+    color:darkorchid;
+}
+[class="p3"]{ /* 套用特定屬性選擇器*/
+    font-size: 50px;
+    font-style: normal;
+    background-color: honeydew;
+}
+
+li[class="location"]{
+    font-style: italic;
+    color: red;
+}
+
+*{ /* 全域選擇器*/
+    color: darkgray;
+
+}

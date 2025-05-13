@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20250423課堂作業練習</title>
+    <style>
+       h1{
+          text-align: center;
+          color: black;
+          background-color: yellow;
+          transition-property:background-color;
+          transition-property: 3s;
+          transition-delay: 2s;
+          opacity: 0.1;
+          height: 100px;
+          width: 500px;
+        }
+        h1:hover{
+            opacity: 1.0;
+            height: 300px;
+            width: 800px;
+            background-color: greenyellow;
+            color: red;
+        }
+
+        p {
+            text-align: center;
+            font-size: 20px;
+            color: red;
+            background-color: lightyellow;
+            transition-property: color,background-color,font-size;
+            transition-duration: 3s;
+        }
+        p:hover{color: brown;background-color: yellow;font-size: 40px;}
+        a{
+            background-color: chocolate;
+            color: aqua;
+            font-size: 20px;
+            text-align: center;
+            transition-property: text-align,font-size,color,background-color;
+            transition-timing-function: steps(10);
+            transition-duration: 10s;
+        }
+        a:hover{font-size: 40px;text-align: right;color: red;background-color: yellow;}
+        input[type=text]:focus{width: 600px;background-color: rgb(65, 5, 229);}
+        @keyframes my-animation{
+            0%{left:0px;top:0px}
+            10%{left:50px;top:50px}
+            20%{left:100px;top:100px}
+            30%{left:150px;top:150px}
+            40%{left:200px;top:200px}
+            50%{left:250px;top:250px}
+            60%{left:300px;top:200px}
+            70%{left:350px;top:150px}
+            80%{left:400px;top:100px}
+            90%{left:450px;top:50x}
+            100%{left:500px;top:0px}
+        }
+
+        @keyframes color-animation{
+            0%{color: blue;}
+            25%{color: green;}
+            50%{color: red;}
+            75%{color: brown;}
+            100%{color: blue;}
+        }
+        @keyframes you-animation{
+            0%{left: 0px;}
+            25%{left: 50px;}
+            50%{left: 100px;}
+            75%{left: 150px;}
+            100%{left: 200px;}
+        }
+        @keyframes we-animation{
+            from{left:0px}
+            to{left: 350px;
+            }
+
+        }
+        #route1{animation-timing-function: ease;color: red;}
+        #route2{animation-timing-function: ease-in;color: blue;}
+        #route3{animation-timing-function: ease-out;color: aqua;}
+        #route4{animation-timing-function: ease-in-out;color: chartreuse;}
+        #route5{animation-timing-function: linear;color: darkgoldenrod;}
+
+        div{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            animation-name: we-animation;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            /*animation-iteration-count: 3;*/
+            animation-direction: alternate;
+        }
+
+
+        body{
+            margin: 0px;
+        }
+        h2{
+            width: 250;
+            height: 50px;
+            color: blue;
+            background-color: yellow;
+            position: absolute;
+            animation-name: my-animation;
+            animation-duration: 3s;
+        }
+        h3{
+            color: blue;
+            animation-name: color-animation;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="opacity: 1;background-color: white; ;">20250423課堂練習</h1>
+    <h2>HTML5+CSS3+JavaScript</h2>
+    <br>
+    <h1>HTML5+CSS3+JavaScript</h1>
+    <p>HTML5+CSS3+JavaScript</p>
+    <a href="#">超連結超連結</a>
+    <hr>
+    <p>Input data:<input type="text" name="input-data"></p>
+    <hr>
+    <div>
+        <img src="egg.jpg" width="100">
+    </div>
+    <hr>
+    <br>
+    <br>
+    <br>
+    <h3>animation-timing-function</h3>
+    <br>
+    <div id="route1">ease</div>
+    <br>
+    <div id="route2">ease-in</div>
+    <br>
+    <div id="route3">ease-out</div>
+    <br>
+    <div id="route4">ease-in-out</div>
+    <br>
+    <div id="route5">linear</div>
+ 
+</body>
+</html>

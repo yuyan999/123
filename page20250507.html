@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20250507課堂練習</title>
+<script src="test.js">
+
+</script>
+
+    <script>
+        // 單行註解
+        /*
+           多行註解
+        */
+        // alert("Hello 雙周班")
+    </script>
+    <noscript>本網頁需要使用javascript</noscript>
+</head>
+<body>
+    <h1 style="text-align: center;">20250507課堂作業</h1>
+    <p onclick="alert('呼叫onclick');">onclick測試</p>
+    <p onclick="alert('呼叫另一次4另一次onclick')">JavaScript</p>
+    <hr>
+    <h2 id="text">HTML+CSS</h2>
+    <script>
+        document.write('<h3 id="t1">JavaScript Hello</h3>');
+    </script>
+    <!-- -->
+    <style>
+        h3#t1{color: red}
+    </style>
+    <button onclick="document.write('<p>Hi, Hi, HI</P>')">按我變換</button>
+    <!-- -->
+    <pre>
+        <script>
+            document.writeln("<h1>Too Mary!!!</h1>");
+            document.writeln("      Happy Summer!!!");
+            document.writeln("  This is test.");
+
+        </script>
+    </pre>
+    <hr>
+    <button onclick="myfunction()">按鈕變字</button>
+    <p id="text"></p>
+    <!---->
+    <hr>
+    <p>
+        書名:<input type="text" id="book">
+        <button onclick="addbook();">新增資料</button>
+    </p>
+    <ul id="list"></ul>
+    <hr>
+    <hr>
+    <p id="ex1"></p>
+    <p id="ex2">SSS</p>
+    <p><button onclick="randomtest();">請按我產生0-1亂數</button></p>
+    <hr>
+    <hr>
+    <p>
+        <button onclick="timefunction()">顯示時間</button>
+        <button onclick="weekfunction()">顯示星期</button>
+    </p>
+    <p id="hr"></p>
+    <p id="t"></p>
+
+
+</body>
+
+</html>

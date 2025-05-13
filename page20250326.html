@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20250326課堂作業練習</title>
+</head>
+<body>
+    <header>
+        <h1>20250326課堂作業練習</h1>
+    </header>
+    <main>
+        <p>填寫基本資料</p>
+        <form action="https://www.hinet.net/main.asp" method="post"accept-charest="UTF-8" name="forml"  id="forml">
+            <fieldset>
+                <legend><b style="background-color: rgb(168, 124, 209);color: #c90404;">基本資料</b></legend>
+                <label>姓名:<input id="name" type="text" size="15" maxlength="15" 
+                    pattern="[\u4e00-\u9fa5]+$|^[a-zA-z\s]+$" placeholder="請輸入姓名"></label> <!--正規表達式-->
+                <label>密碼:<input id="pwd" type="password" size="15" maxlength="15"></label>
+                <label>生日:<input id="birth" type="date" value="1990-01-01S"></label>
+                <label>電話:<input id="tel" type="tel" pattern="09\d{2}-\d{6}" 
+                    placeholder="09xx-xxxxxxx" maxlength="11" size="11"></label>
+                <label>電子郵件:<input id="email" type="email" placeholder="請輸入email"></label>
+                <label>性別:
+                    <input id="sex" type="radio" name="sex">男生
+                    <input id="sex" type="radio" name="sex">女生
+                    </label>
+            </fieldset>
+            <p></p>
+            <fieldset>
+                <legend><strong style="color: #c90404;">填寫調查</strong></legend>
+                <label>你曾經使用過的行動電話品牌</label><br>
+                <label>Apple手機<input type="checkbox"  value="1" name="ck1" id="gp1"></input></label>
+                <label>Andrdid手機<input type="checkbox"  value="2" name="ck1" id="gp2"></input></label>
+                <label>Sony手機<input type="checkbox"  value="3" name="ck1" id="gp3"></input></label>
+                <label>Samsung手機<input type="checkbox" value="4" name="ck1" id="gp4"></input></label>
+                <label>OPPO手機<input type="checkbox"  value="5" name="ck1" id="gp5"></input></label>
+                <p></p>
+                <label>電信公司</label>
+                <select id="telecom" name="telecom" size="1" required>
+                    <option value="中華電信" selected>中華電信</option>
+                    <option value="遠傳電信">遠傳電信</option>
+                    <option value="台灣大哥大">台灣大哥大</option>
+                    <option value="其他">其他</option>
+                </select>
+                <p></p>
+                <label>選擇原因</label>
+                <select size="5" multiple id="reason_select" name="reason_select">
+                    <option value="價格優惠" selected>價格優惠</option>
+                    <option value="方案眾多">方案眾多</option>
+                    <option value="網路速度">網路速度</option>
+                    <option value="好康贈品">好康贈品</option>
+                </select>
+            </fieldset>
+
+ 
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
