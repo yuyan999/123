@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="info" action="" method="get">
+        <p>姓名:<input type="text" name="name"></p>
+        <p>電話:<input type="text" name="phone"></p>
+        <p><input type="submit" value="送出"></p>
+    </form>
+    <button onclick="getinfo()">檢測</button>
+    <p id="show"></p>
+    <script>
+        function getinfo(){
+            var i;
+            var txt="";
+            var str =document.forms["info"];
+            var L = str.length;
+            for(i=0;i<L;i++){
+                txt +=str.elements[i].value+"<br>";
+
+            }
+            if(str.elements[i]="abcd" && str.elements[1].value=='1234'){
+                window.alert("OKOKOK!");
+            }
+            document.getElementById("show").innerHTML=txt;
+        }
+    </script>
+</body>
+</html>

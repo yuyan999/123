@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20250514課堂練習</title>
+    <script>
+        var status="";
+        var idTime;
+        function guess(){
+            //var puzzle = 30;
+            var puzzle = parseInt(Math.random()*10)
+            var numInput = window.prompt("請輸入0-50的數字","0-50");
+            do{
+                if(Number(numInput)>puzzle){
+                    window.alert("請猜小一點")
+                    numInput=window.prompt("請輸入0-50的數字","0-50")
+                }else{
+                    window.alert("請猜大一點")
+                    numInput=window.prompt("請輸入0-50的數字","0-50")
+                }
+                if(Number(numInput)==30){
+                    break;
+                }
+            }while(Number(numInput!=puzzle))
+            window.alert("恭喜!猜中了")
+
+        }
+        function counterTime(){
+            status="計時中......"
+            document.getElementById("t1").innerHTML=status;
+            idTine=setTimeout(stopTime,3000); //計時間隔3秒鐘呼叫stoptime一次
+        }
+        function stopTime(){
+            var isBoolean = window.confirm('請否繼續呢?')
+            if(isBoolean==false){
+                status="計時結束"
+                document.getElementById("t1").innerHTML = status;
+                clearTimeout(idTime);
+            }else{
+                counterTime(); //重新計時
+            }
+        }
+        function myTime(){ //啟動
+            setInterval(function(){startTime()},1000);
+            setInterval(startTime,1000);
+        }
+        function startTime(){
+            var currentTime = new Data(); //產生日期物件
+            var localTime = currentTime.toLocaleTimeString();
+            document.getElementById('t1').innerHTML = localTime;
+        }
+    </script>
+    <style>
+        h3{color: red;}
+        h1{color: blue;text-align: center;}
+        p#t1{font-size: 18px;}
+    </style>
+</head>
+
+<body>
+    <h1>20250514課堂練習</h1>
+    <h3>猜數字遊戲</h3>
+    <form>
+        <input type="button" value="猜數字遊戲" onclick="guess()">
+    </form>
+    <h3>計時測試</h3>
+    <form>
+        <input type="button" value="計時3秒鐘" onclick="counterTime()">
+        <input type="button" value="開始顯示" onclick="setTime()">
+    </form>
+    <p id="t1"></p>
+</body>
+</html>

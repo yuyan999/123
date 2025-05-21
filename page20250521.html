@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page20250521課堂練習</title>
+</head>
+<body>
+    <h1 style="text-align: center;color: blue;">20250521課堂練習</h1>
+    <p>請點選以下數學公式</p>
+    <a href="#" onclick="f(20,30)">x+y</a>
+    <form>
+        x=<input type="text" id="xx" name="x"><br>
+        y=<input type="text" id="yy" name="y"><br>
+        <button onclick="f()">計算</button>
+    </form>
+    <hr>
+<p id="p1">螢幕高度=</p>
+<p id="p2">可用高度=</p>
+<p id="p3">螢幕寬度=</p>
+<p id="p4">可用寬度=</p>
+<p id="p5">色彩深度=</p>
+    <script>
+        function f(x,y){
+            var sum =x+y;
+            window.alert(x+"+"+y+"="+sum);
+        }
+        function show(){
+
+        }
+        document.getElementById("p1").innerHTML=screen.height;
+        document.getElementById("p2").innerHTML=screen.availHeight;
+        document.getElementById("p3").innerHTML=screen.width;
+        document.getElementById("p4").innerHTML=screen.availWidth;
+        document.getElementById("p5").innerHTML=screen.colorDepth;
+    </script>
+</body>
+</html>
